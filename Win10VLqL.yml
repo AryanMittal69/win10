@@ -6,8 +6,8 @@ services:
       VERSION: "10"
       USERNAME: "DarkDevil"
       PASSWORD: "Aryan987"
-      RAM_SIZE: "12G"
-      CPU_CORES: "8"
+      RAM_SIZE: "10G"
+      CPU_CORES: "6"
       DISK_SIZE: "750G"
     devices:
       - /dev/kvm
