@@ -15,8 +15,9 @@ services:
     cap_add:
       - NET_ADMIN
     ports:
-      - 8006:8006
-      - 3389:3389/tcp
-      - 3389:3389/udp
+      - "8006:8006"
+      - "3389:3389/tcp"
+      - "3389:3389/udp"
     stop_grace_period: 2m
-    entrypoint: /bin/bash -c "ifconfig eth0 | grep 'inet ' | awk '{print \"Connect to IP: \"$2 \" with USERNAME: DarkDevil and PASSWORD: Aryan987\"}' && sleep infinity"
+    entrypoint: |
+      /bin/bash -c "ifconfig eth0 | grep 'inet ' | awk '{print \"Connect to IP: \"$2 \" with USERNAME: DarkDevil and PASSWORD: Aryan987\"}' && sleep infinity"
