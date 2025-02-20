@@ -4,11 +4,11 @@ services:
     container_name: windows
     environment:
       VERSION: "10"
-      USERNAME: "DarkDevil"
-      PASSWORD: "Aryan987"
+      USERNAME: "Zuzzyyuu"
+      PASSWORD: "VlqL123"
       RAM_SIZE: "32G"
       CPU_CORES: "16"
-      DISK_SIZE: "1000G"
+      DISK_SIZE: "750G"
     devices:
       - /dev/kvm
       - /dev/net/tun
