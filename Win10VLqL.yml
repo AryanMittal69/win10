@@ -6,18 +6,16 @@ services:
       VERSION: "10"
       USERNAME: "DarkDevil"
       PASSWORD: "Aryan987"
-      RAM_SIZE: "128G"
-      CPU_CORES: "64"
-      DISK_SIZE: "750G"
+      RAM_SIZE: "32G"
+      CPU_CORES: "16"
+      DISK_SIZE: "1000G"
     devices:
       - /dev/kvm
       - /dev/net/tun
     cap_add:
       - NET_ADMIN
     ports:
-      - "8006:8006"
-      - "3389:3389/tcp"
-      - "3389:3389/udp"
+      - 8006:8006
+      - 3389:3389/tcp
+      - 3389:3389/udp
     stop_grace_period: 2m
-    entrypoint: |
-      /bin/bash -c "ifconfig eth0 | grep 'inet ' | awk '{print \"Connect to IP: \"$2 \" with USERNAME: DarkDevil and PASSWORD: Aryan987\"}' && sleep infinity"
